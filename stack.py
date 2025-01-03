@@ -13,7 +13,7 @@ class Stack:
     def push(self, number: Any): # time: O(1)
         self.stack.append(number)
         self.update_size()
-    def pop(self): # time: O(N)
+    def pop(self): # time: O(1)
         if self.size > 0:
             popped = self.stack.pop()
             self.update_size()
@@ -23,21 +23,17 @@ class Stack:
     def peek(self):
         return self.stack[-1]
     def print(self):
-        if self.size > 0:
-            for i in range(0, self.size):
-                print(self.stack[i])
-        else:
-            raise Exception('empty stack')
+        print(self.stack)
 
-# stack = Stack()
-# stack.pop()
-# print(stack.get_size())
-# stack.push(1)
-# stack.push(2)
-# print(stack.pop())
-# stack.push(3)
-# print(stack.get_size())
-# stack.print()
+stack = Stack()
+stack.pop()
+print(stack.get_size())
+stack.push(1)
+stack.push(2)
+print(stack.pop())
+stack.push(3)
+print(stack.get_size())
+stack.print()
 
 '''
 leetcode 20
